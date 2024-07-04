@@ -26,6 +26,7 @@ Your Astro project contains the following files and folders:
 ```bash
 # Clone project
 git clone https://github.com/sajML/pipline-meltano-fastapi-airflow.git
+cd pipline-meltano-fastapi-airflow
 astro dev start
 ```
 
