@@ -1,4 +1,4 @@
-Astro CLI (Airflow) Project for viceversa exercise 1
+# Astro CLI (Airflow) Project for viceversa exercise 1
 ========
 
 Welcome to Astronomer! This project was generated after you ran 'astro dev init' using the Astronomer CLI. This readme describes the contents of the project, as well as how to run Apache Airflow on your local machine.
@@ -19,10 +19,15 @@ Your Astro project contains the following files and folders:
 - plugins: Add custom or community plugins for your project to this file. It is empty by default.
 - airflow_settings.yaml: Use this local-only file to specify Airflow Connections, Variables, and Pools instead of entering them in the Airflow UI as you develop DAGs in this project.
 
-Deploy Your Project Locally
-===========================
+## Usage
+### Deploy Your Project Locally
 
-1. Start Airflow on your local machine by running 'astro dev start'.
+1. Start Airflow and create csv file on your local machine (`for windows C:\output`) by running:
+```bash
+# Clone project
+git clone https://github.com/sajML/pipline-meltano-fastapi-airflow.git
+astro dev start
+```
 
 This command will spin up 4 Docker containers on your machine, each for a different Airflow component:
 
@@ -35,7 +40,7 @@ This command will spin up 4 Docker containers on your machine, each for a differ
 
 Note: Running 'astro dev start' will start your project with the Airflow Webserver exposed at port 8080 and Postgres exposed at port 5432. If you already have either of those ports allocated, you can either [stop your existing Docker containers or change the port](https://docs.astronomer.io/astro/test-and-troubleshoot-locally#ports-are-not-available).
 
-3. Access the Airflow UI for your local Airflow project. To do so, go to http://localhost:8080/ and log in with 'admin' for both your Username and Password.
+3. Access the Airflow UI for your local Airflow project. To do so, go to `http://localhost:8080/` and log in with 'admin' for both your Username and Password.
 
 You should also be able to access your Postgres Database at 'localhost:5432/postgres'.
 
